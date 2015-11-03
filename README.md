@@ -1,4 +1,5 @@
 # flask-rollbar
+
 Sets up a sane/reasonable Rollbar configuration for Flask apps, based
 upon Rollbar's suggestions and personal experience.  Ignores some
 400-level exceptions by default but can be customized.
@@ -22,4 +23,3 @@ Here's a quick example of initializing this plugin in:
     @app.route('/')
     def this_will_fail():
         1/0
-"""
