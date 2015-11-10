@@ -62,7 +62,7 @@ class Rollbar(object):
         ignored = [(exc, 'ignored') for exc in self.ignore_exc]
         rollbar.init(
             app.config['ROLLBAR_TOKEN'],
-            environment=getattr(app.config, 'ROLLBAR_ENV', 'dev'),
+            environment=app.config.get('ROLLBAR_ENV', 'dev'),
             root=os.path.dirname(os.path.realpath(__file__)),
             allow_logging_basic_config=False,
             exception_level_filters=ignored,

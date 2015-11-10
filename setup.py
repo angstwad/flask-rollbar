@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='flask-rollbar',
-    version='1.0',
+    version='1.0.1',
     url='https://github.com/angstwad/flask-rollbar',
     license='Apache v2.0',
     author='Paul Durivage',
