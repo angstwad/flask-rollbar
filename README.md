@@ -23,3 +23,12 @@ Here's a quick example of initializing this plugin in:
     @app.route('/')
     def this_will_fail():
         1/0
+
+Customizing ignored exceptions:
+
+```
+from werkzeug.exceptions import Unauthorized, Forbidden, NotFound
+
+ignored = [Unauthorized, Forbidden, NotFound]
+Rollbar(app, ignore_exc=ignored)
+```
